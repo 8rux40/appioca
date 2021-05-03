@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1070322905682",
+    "project_id": "appioca",
+    "storage_bucket": "appioca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070322905682:android:5a1719e77a6a53a687e58b",
+        "android_client_info": {
+          "package_name": "com.tardin.appioca"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1070322905682-bpe399h3ffa773b5okeidtjjmg365fjb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi04DhvlvS46Xl6Q9rQn10OxvCS7G5_0o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1070322905682-bpe399h3ffa773b5okeidtjjmg365fjb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

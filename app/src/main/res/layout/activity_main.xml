@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            tools:layout_editor_absoluteX="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivUserPhoto"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivFavoriteRecipes"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/baseline_favorite_24" />
+
+            <ImageView
+                android:id="@+id/ivMyRecipes"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivFavoriteRecipes"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/cooker_hat" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="380dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnCreateNewRecipe"
+                android:layout_width="183dp"
+                android:layout_height="99dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/blue"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:inputType="textMultiLine"
+                android:text="Envie agora a SUA RECEITA!"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.487"
+                app:layout_constraintStart_toEndOf="@+id/ivChef"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/segoe"
+                android:includeFontPadding="false"
+                android:text="Novidades"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="0dp"
+                android:layout_height="289dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+                <RelativeLayout
+                    android:id="@+id/containerNewRecipes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <!--            <androidx.cardview.widget.CardView-->
+                    <!--                android:layout_width="200dp"-->
+                    <!--                android:layout_height="match_parent"-->
+                    <!--                android:backgroundTint="@color/orange"-->
+                    <!--                app:cardCornerRadius="15dp">-->
+
+                    <!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="match_parent">-->
+
+                    <!--                    <ImageView-->
+                    <!--                        android:id="@+id/imageView2"-->
+                    <!--                        android:layout_width="0dp"-->
+                    <!--                        android:layout_height="165dp"-->
+                    <!--                        android:scaleType="centerCrop"-->
+                    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                    <!--                        app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                        tools:srcCompat="@tools:sample/backgrounds/scenic" />-->
+
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/tvRecipeName"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginTop="12dp"-->
+                    <!--                        android:fontFamily="@font/segoe"-->
+                    <!--                        android:text="Recipe name"-->
+                    <!--                        android:textAllCaps="true"-->
+                    <!--                        android:textColor="@color/white"-->
+                    <!--                        android:textStyle="bold"-->
+                    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                        app:layout_constraintHorizontal_bias="0.504"-->
+                    <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                    <!--                        app:layout_constraintTop_toBottomOf="@+id/imageView2" />-->
+
+                    <!--                    <ImageView-->
+                    <!--                        android:id="@+id/imageView3"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginStart="40dp"-->
+                    <!--                        android:layout_marginTop="16dp"-->
+                    <!--                        android:tint="@color/white"-->
+                    <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                    <!--                        app:layout_constraintTop_toBottomOf="@+id/tvRecipeName"-->
+                    <!--                        app:srcCompat="@drawable/baseline_timer_24" />-->
+
+                    <!--                    <ImageView-->
+                    <!--                        android:id="@+id/imageView4"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginTop="16dp"-->
+                    <!--                        android:layout_marginEnd="40dp"-->
+                    <!--                        android:tint="@color/white"-->
+                    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                        app:layout_constraintTop_toBottomOf="@+id/tvRecipeName"-->
+                    <!--                        app:srcCompat="@drawable/baseline_restaurant_menu_24" />-->
+
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/textView9"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginStart="30dp"-->
+                    <!--                        android:layout_marginTop="8dp"-->
+                    <!--                        android:text="00 MIN"-->
+                    <!--                        android:textColor="@color/white"-->
+                    <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                    <!--                        app:layout_constraintTop_toBottomOf="@+id/imageView3" />-->
+
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/textView10"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginTop="8dp"-->
+                    <!--                        android:text="00 PORÇÕES"-->
+                    <!--                        android:textColor="@color/white"-->
+                    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                        app:layout_constraintHorizontal_bias="0.619"-->
+                    <!--                        app:layout_constraintStart_toEndOf="@+id/textView9"-->
+                    <!--                        app:layout_constraintTop_toBottomOf="@+id/imageView4" />-->
+                    <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                    <!--            </androidx.cardview.widget.CardView>-->
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewRecentRecipes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </RelativeLayout>
+            </HorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/ivChef"
+                android:layout_width="131dp"
+                android:layout_height="301dp"
+                android:layout_marginTop="32dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/chef_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.045"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="188dp"
+                android:layout_height="71dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/segoe"
+                android:text="E você, manda bem na cozinha?"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivChef"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="182dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/segoe"
+                android:text="Compartilhe com a gente suas deliciosas receitas ;)"
+                android:textColor="@color/orange_variant"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.465"
+                app:layout_constraintStart_toEndOf="@+id/ivChef"
+                app:layout_constraintTop_toBottomOf="@+id/btnCreateNewRecipe" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
