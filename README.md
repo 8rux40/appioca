@@ -4,7 +4,7 @@
 
 ### Aplicativo Android de receitas culinárias.
 
-Criado durante o teste final da disciplina Tópicos Avançados I, ministrada por ![Leandro Foly](https://www.linkedin.com/in/leandro-foly-935a007), no curso Bacharelado em Sistemas de Informação no Instituto de Educação, Ciência e Tecnologia Fluminense. 
+Criado para o teste final da disciplina Tópicos Avançados I, ministrada por ![Leandro Foly](https://www.linkedin.com/in/leandro-foly-935a007), no curso Bacharelado em Sistemas de Informação no Instituto de Educação, Ciência e Tecnologia Fluminense. 
 
 ![image](https://user-images.githubusercontent.com/17161794/116946936-d4f3ad80-ac51-11eb-9b0b-6af1f429f563.png)
 ![image](https://user-images.githubusercontent.com/17161794/116947020-0f5d4a80-ac52-11eb-9a42-3cf2daea4965.png)
